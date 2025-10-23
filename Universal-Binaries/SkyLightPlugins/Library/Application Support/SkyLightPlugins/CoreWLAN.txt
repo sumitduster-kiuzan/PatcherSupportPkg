@@ -2,6 +2,8 @@
 /System/Library/CoreServices/ControlCenter.app/Contents/MacOS/ControlCenter
 /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer
 /System/Applications/System Settings.app/Contents/MacOS/System Settings
+/System/Applications/System Preferences.app/Contents/MacOS/System Preferences
+/System/Library/CoreServices/Wireless Diagnostics.app/Contents/MacOS/Wireless Diagnostics
 /System/Library/CoreServices/WiFiSettingsUIAgent.app/Contents/MacOS/WiFiSettingsUIAgent
 /System/Library/CoreServices/Menu Extras/AirPort.menu/Contents/MacOS/AirPort
 /System/Library/CoreServices/WiFiAgent.app/Contents/MacOS/WiFiAgent
