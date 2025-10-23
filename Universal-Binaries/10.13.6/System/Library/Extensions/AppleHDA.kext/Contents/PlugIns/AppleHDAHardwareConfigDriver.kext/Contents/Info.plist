@@ -418,6 +418,20 @@
 					<key>LayoutID</key>
 					<integer>16392</integer>
 				</dict>
+				<dict>
+					<key>Codec</key>
+					<string>Intel Tahoe HDA</string>
+					<key>CodecID</key>
+					<integer>283904134</integer>
+					<key>ConfigData</key>
+					<data>
+					QWljY1FBSW5IUUFDSng3R0FpY2YwQT09
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>0</integer>
+				</dict>
 			</array>
 			<key>IOClass</key>
 			<string>AppleHDAHardwareConfigDriver</string>
@@ -1066,6 +1080,20 @@
 							<integer>28020848</integer>
 						</dict>
 					</array>
+				</dict>
+				<dict>
+					<key>Codec</key>
+					<string>Intel Tahoe HDA</string>
+					<key>CodecID</key>
+					<integer>283904134</integer>
+					<key>ConfigData</key>
+					<data>
+					AiccQAInHQACJx7GAicf0A==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>0</integer>
 				</dict>
 			</array>
 		</dict>
