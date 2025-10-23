@@ -1,0 +1,1 @@
+/System/Library/Extensions/AppleBCMWLANCompanion.kext/Contents/MacOS/AppleBCMWLANCompanion

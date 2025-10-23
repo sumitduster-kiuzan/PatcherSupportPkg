@@ -1,0 +1,11 @@
+{
+  "CFBundleDevelopmentRegion": "en",
+  "CFBundleExecutable": "AppleBCMWLANCompanion",
+  "CFBundleIdentifier": "com.apple.driver.AppleBCMWLANCompanion",
+  "CFBundleInfoDictionaryVersion": "6.0",
+  "CFBundleName": "AppleBCMWLANCompanion",
+  "CFBundlePackageType": "KEXT",
+  "CFBundleShortVersionString": "1.0.0",
+  "CFBundleVersion": "1.0.0",
+  "OSBundleRequired": "Safe Boot"
+}
