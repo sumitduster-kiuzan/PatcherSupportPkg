@@ -1,0 +1,35 @@
+diff --git a/opencore_legacy_patcher/support/subprocess_wrapper.py b/opencore_legacy_patcher/support/subprocess_wrapper.py
+index c3ea354d3..7c7fc5ca1 100644
+--- a/opencore_legacy_patcher/support/subprocess_wrapper.py
++++ b/opencore_legacy_patcher/support/subprocess_wrapper.py
+@@ -119,18 +119,28 @@ def generate_log(process: subprocess.CompletedProcess) -> str:
+         output += f"        Likely Enum: {_returned_error}\n"
+     output += f"    Standard Output:\n"
+     if process.stdout:
+-        output += __format_output(process.stdout.decode("utf-8"))
++        output += __format_output(__decode_output(process.stdout))
+     else:
+         output += "        None\n"
+     output += f"    Standard Error:\n"
+     if process.stderr:
+-        output += __format_output(process.stderr.decode("utf-8"))
++        output += __format_output(__decode_output(process.stderr))
+     else:
+         output += "        None\n"
+ 
+     return output
+ 
+ 
++def __decode_output(output) -> str:
++    """
++    Decode subprocess output to string.
++    Handles both bytes and str types.
++    """
++    if isinstance(output, bytes):
++        return output.decode("utf-8")
++    return output
++
++
+ def __resolve_privileged_helper_errors(return_code: int) -> str:
+     """
+     Attempt to resolve Privileged Helper Tool error codes.
