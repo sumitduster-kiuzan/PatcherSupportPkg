@@ -1,0 +1,1 @@
+/System/Applications/System Settings.app/Contents/MacOS/System Settings
