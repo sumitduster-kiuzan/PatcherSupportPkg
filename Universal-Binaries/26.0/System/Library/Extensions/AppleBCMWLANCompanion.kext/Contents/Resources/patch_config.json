@@ -1,0 +1,18 @@
+{
+  "macos_26_patches": {
+    "26.0": {
+      "description": "Initial macOS 26 support for AppleBCMWLANCompanion",
+      "kext_version": "1.0.0",
+      "compatibility": [
+        "26.0",
+        "26.1",
+        "26.2"
+      ],
+      "injection_methods": [
+        "kext_load",
+        "plist_injection",
+        "binary_patching"
+      ]
+    }
+  }
+}
