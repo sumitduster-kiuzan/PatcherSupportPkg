@@ -24,6 +24,12 @@ UNUSED = [
     # Remove .pkg, unused by patcher
     "WebDriver-387.10.10.10.40.140/WebDriver-387.10.10.10.40.140.pkg",
     "WebDriver-387.10.10.10.40.140/WebDriver-387.10.10.15.15.108.pkg",
+    # Exclude AppleBCMWLANCompanion documentation and scripts from signing
+    "26.0/README.md",
+    "26.0/AppleBCMWLANCompanion-Installation-Guide.md",
+    "26.0/OpenCore-Config-Template.plist",
+    "26.0/install-bcmwlan-companion.sh",
+    "26.0/detect-broadcom-wifi.sh",
 ]
 
 # Constants

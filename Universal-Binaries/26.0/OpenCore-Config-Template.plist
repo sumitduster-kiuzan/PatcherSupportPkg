@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- AppleBCMWLANCompanion OpenCore Configuration Template -->
+    <!-- Add these sections to your existing config.plist -->
+    
+    <key>Kernel</key>
+    <dict>
+        <key>Add</key>
+        <array>
+            <!-- Lilu - Required dependency -->
+            <dict>
+                <key>BundlePath</key>
+                <string>Lilu.kext</string>
+                <key>Comment</key>
+                <string>Lilu - Arbitrary kext and process patching</string>
+                <key>Enabled</key>
+                <true/>
+                <key>ExecutablePath</key>
+                <string>Contents/MacOS/Lilu</string>
+                <key>MaxKernel</key>
+                <string></string>
+                <key>MinKernel</key>
+                <string>12.0.0</string>
+                <key>PlistPath</key>
+                <string>Contents/Info.plist</string>
+            </dict>
+            
+            <!-- AppleBCMWLANCompanion -->
+            <dict>
+                <key>BundlePath</key>
+                <string>AppleBCMWLANCompanion.kext</string>
+                <key>Comment</key>
+                <string>AppleBCMWLANCompanion - Broadcom Wi-Fi support for macOS 26</string>
+                <key>Enabled</key>
+                <true/>
+                <key>ExecutablePath</key>
+                <string>Contents/MacOS/AppleBCMWLANCompanion</string>
+                <key>MaxKernel</key>
+                <string></string>
+                <key>MinKernel</key>
+                <string>26.0.0</string>
+                <key>PlistPath</key>
+                <string>Contents/Info.plist</string>
+            </dict>
+        </array>
+        
+        <key>Block</key>
+        <array>
+            <!-- Block conflicting drivers if needed -->
+        </array>
+        
+        <key>Patch</key>
+        <array>
+            <!-- Kernel patches if needed -->
+        </array>
+    </dict>
+    
+    <key>DeviceProperties</key>
+    <dict>
+        <key>Add</key>
+        <dict>
+            <!-- BCM43602 Device Properties -->
+            <!-- Replace PciRoot path with your actual device path -->
+            <key>PciRoot(0x0)/Pci(0x1C,0x0)/Pci(0x0,0x0)</key>
+            <dict>
+                <key>compatible</key>
+                <string>pci14e4,43ba</string>
+                <key>device-id</key>
+                <data>ukM=</data>
+                <key>vendor-id</key>
+                <data>5BQ=</data>
+                <key>name</key>
+                <string>wifi</string>
+                <key>model</key>
+                <string>BCM43602 802.11ac Wireless Network Adapter</string>
+            </dict>
+            
+            <!-- BCM4350 Device Properties (Alternative) -->
+            <!-- Use this section if you have BCM4350 instead -->
+            <!--
+            <key>PciRoot(0x0)/Pci(0x1C,0x0)/Pci(0x0,0x0)</key>
+            <dict>
+                <key>compatible</key>
+                <string>pci14e4,43a3</string>
+                <key>device-id</key>
+                <data>o0M=</data>
+                <key>vendor-id</key>
+                <data>5BQ=</data>
+                <key>name</key>
+                <string>wifi</string>
+                <key>model</key>
+                <string>BCM4350 802.11ac Wireless Network Adapter</string>
+            </dict>
+            -->
+        </dict>
+        
+        <key>Delete</key>
+        <dict>
+            <!-- Delete conflicting properties if needed -->
+        </dict>
+    </dict>
+    
+    <key>NVRAM</key>
+    <dict>
+        <key>Add</key>
+        <dict>
+            <key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
+            <dict>
+                <key>boot-args</key>
+                <string>-v keepsyms=1 debug=0x100</string>
+                <!-- Add bcmc-debug=1 for debugging -->
+                <!-- Add bcmc-verbose=1 for verbose output -->
+                <!-- Add -liludbgall for Lilu debugging -->
+            </dict>
+        </dict>
+        
+        <key>Delete</key>
+        <dict>
+            <key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
+            <array>
+                <!-- Delete conflicting boot args if needed -->
+            </array>
+        </dict>
+    </dict>
+</dict>
+</plist>
