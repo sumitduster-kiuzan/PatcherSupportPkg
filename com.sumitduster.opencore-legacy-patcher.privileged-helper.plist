@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.sumitduster.opencore-legacy-patcher.privileged-helper</string>
+    
+    <key>MachServices</key>
+    <dict>
+        <key>com.sumitduster.opencore-legacy-patcher.privileged-helper</key>
+        <true/>
+    </dict>
+    
+    <key>Program</key>
+    <string>/Library/PrivilegedHelperTools/com.sumitduster.opencore-legacy-patcher.privileged-helper</string>
+    
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Library/PrivilegedHelperTools/com.sumitduster.opencore-legacy-patcher.privileged-helper</string>
+    </array>
+    
+    <key>RunAtLoad</key>
+    <false/>
+    
+    <key>KeepAlive</key>
+    <false/>
+    
+    <key>OnDemand</key>
+    <true/>
+    
+    <key>UserName</key>
+    <string>root</string>
+    
+    <key>GroupName</key>
+    <string>wheel</string>
+    
+    <key>StandardOutPath</key>
+    <string>/var/log/opencore-legacy-patcher-privileged-helper.log</string>
+    
+    <key>StandardErrorPath</key>
+    <string>/var/log/opencore-legacy-patcher-privileged-helper.log</string>
+</dict>
+</plist>
