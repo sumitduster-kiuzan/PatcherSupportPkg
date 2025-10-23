@@ -2,6 +2,10 @@
 
 Repo dedicated to Apple binaries used for patching macOS to run with legacy hardware.
 
+## Troubleshooting
+
+If you encounter issues with mounting the DMG (particularly sudo password errors), see [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) for detailed solutions.
+
 ## Sources:
 
 * [ASentientBot](https://github.com/ASentientBot):
