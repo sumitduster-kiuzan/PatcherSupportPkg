@@ -1,1 +1,0 @@
-/System/Library/CoreServices/ControlCenter.app/Contents/MacOS/ControlCenter
