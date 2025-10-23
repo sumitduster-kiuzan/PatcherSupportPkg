@@ -1,0 +1,23 @@
+--- a/opencore_legacy_patcher/support/subprocess_wrapper.py
++++ b/opencore_legacy_patcher/support/subprocess_wrapper.py
+@@ -174,7 +174,10 @@ class SubprocessWrapper:
+         """
+         if isinstance(result, subprocess.CompletedProcess):
+             if result.stdout:
+-                output += result.stdout.decode("utf-8", errors="ignore")
++                if isinstance(result.stdout, bytes):
++                    output += result.stdout.decode("utf-8", errors="ignore")
++                else:
++                    output += str(result.stdout)
+             if result.stderr:
+-                output += result.stderr.decode("utf-8", errors="ignore")
++                if isinstance(result.stderr, bytes):
++                    output += result.stderr.decode("utf-8", errors="ignore")
++                else:
++                    output += str(result.stderr)
+         else:
+-            output += result.decode("utf-8", errors="ignore")
++            if isinstance(result, bytes):
++                output += result.decode("utf-8", errors="ignore")
++            else:
++                output += str(result)
